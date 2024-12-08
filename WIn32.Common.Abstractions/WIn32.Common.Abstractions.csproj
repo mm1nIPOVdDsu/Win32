@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<!-- 
+		If there's an error in a CSPROJ file, don't foget to look
+		at the shared project file in Solution Items.
+	-->
+	<Import Project="$(MSBuildProjectDirectory)\..\Solution.targets" />
+
+	<!-- Specific Assembly Information -->
+	<PropertyGroup>
+		<Description>Abstraction of classes, interfaces, enums, and others for Win32.Common.</Description>
+		<PackageId>Win32.Common.Abstractions</PackageId>
+
+		<!-- To include all dependencies in the output directory -->
+		<!-- <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies> -->
+		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+		<RootNamespace>Win32.Common</RootNamespace>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="8.0.0" />
+	</ItemGroup>
+
+</Project>
